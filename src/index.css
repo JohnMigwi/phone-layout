@@ -371,7 +371,7 @@
   color: #fff;
 }
 .left-side {
-  margin-right: 10px; /* Add margin to separate the left side from the right side */
+  margin-right: 10px; 
 }
 .pink {
   color: pink;
@@ -457,7 +457,9 @@
   padding: 5px 10px;
   margin: 0 25px 0 25px;
   border: 1px solid transparent;
-  
+  justify-content: center;
+  align-items: center;
+  display: flex;
   border-radius: 20px;
 }
 
@@ -466,6 +468,20 @@
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .period-buttons {
+    height: auto; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    position: absolute;
+    transition: all .2s linear;
+    transform: translateY(-100%);
+  }
+
+  .period-text {
+    margin: 5px 10px; 
+  }
+}
 
 
 

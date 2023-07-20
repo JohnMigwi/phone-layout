@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 import data from '../../Resource/Data';
 import CustomDot from '../../Resource/CustomDot';
 import CustomTooltip from '../../Resource/customtool';
@@ -17,8 +17,6 @@ const MiddleBody = ({analytics}) => {
   // Compute the highest and lowest values in chartData
   const maxDataValue = Math.max(...chartData.map((dataPoint) => dataPoint.uv));
   const minDataValue = Math.min(...chartData.map((dataPoint) => dataPoint.uv));
-
-  console.log(maxDataValue, minDataValue)
 
   // manual stylings
   const style = {

@@ -198,46 +198,79 @@
 /* UpperBody.css */
 
 .upper-body {
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ccc;
+  background-color: #fffffe;
+  padding: 20px;
   border-radius: 5px;
 }
 
-.line {
+.upper-body .bitcoin {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
+  padding: 5px 0;
 }
 
-.bitcoin-icon {
-  font-size: 24px;
-  margin-right: 10px;
+.upper-body .bitcoin-icon {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #ffb13b;
 }
 
-.name {
-  font-size: 18px;
+.upper-body .name {
+  font-size: 1.2rem;
+}
+
+.upper-body .symbol {
+  font-size: 1.2rem;
+  color: #d0d4d9;
+  flex: 1;
+  text-align: end;
   font-weight: bold;
-  margin-right: 10px;
+}
+.upper-body .amountBtc{
+  font-size: 2rem;
+  color: #adb4b9;
+  font-weight: 800;
+  padding: 5px 0;
+}
+.upper-body .amountUsd{
+  display: flex;
+  justify-content: space-between;
+}
+.upper-body .amountUsd span:first-child{
+  color: #cad3d9;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+.upper-body .percentage-decrease {
+  color: white;
+  background-color: #f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-weight: 800;
+  border-radius: 100px;
 }
 
-.symbol {
-  font-size: 16px;
-  color: #888;
+.upper-body .arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.upper-body .arrows span{
+  font-weight: 800;
+  color: #566170;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+.upper-body .arrows span.active{
+  display: inline;
 }
 
-.percentage-decrease {
-  color: #f00;
-  margin-left: 10px;
-}
-
-.arrow-down {
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 12px solid #f00;
-  width: 0;
-  height: 0;
-}
 
 /* footer stylings */
 

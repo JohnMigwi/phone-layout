@@ -18,8 +18,10 @@ const MiddleBody = () => {
   const maxDataValue = Math.max(...chartData.map((dataPoint) => dataPoint.uv));
   const minDataValue = Math.min(...chartData.map((dataPoint) => dataPoint.uv));
 
+  console.log(maxDataValue, minDataValue)
+
   return (
-    <>
+    <section className='middle-section'>
       <div className="period-buttons">
         <div className="period-text" onClick={() => handlePeriodChange('day')}>
           Day
@@ -35,12 +37,18 @@ const MiddleBody = () => {
         </div>
       </div>
       
-      <div>
+      <div className='analytics'>
         <div className='left'>
-        <CustomTooltip maxDataValue={maxDataValue} />
+          <span className='dot'></span>
+          <span>
+            Lower ${maxDataValue}
+          </span>
         </div>
         <div className='right'>
-        <CustomTooltip  minDataValue={minDataValue} />
+          <span className='dot'></span>
+          <span>
+            highest ${minDataValue}
+          </span>
         </div>
       </div>
       <div className="middle-body">
@@ -61,7 +69,7 @@ const MiddleBody = () => {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-    </>
+    </ section>
   );
 };
 

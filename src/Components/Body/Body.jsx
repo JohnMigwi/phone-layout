@@ -5,11 +5,11 @@ import LowerBody from './LowerBody';
 
 const Body = () => {
   return (
-    <>
-    <UpperBody/>
-    <MiddleBody/>
-    <LowerBody/>
-    </>
+    <section className='bodySection'>
+        <UpperBody/>
+        <MiddleBody/>
+        <LowerBody/>
+    </section>
   )
 }
 

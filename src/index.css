@@ -22,6 +22,8 @@
   overflow: hidden;
   box-shadow: 3px 6px 10px gray;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header stylings */
@@ -159,7 +161,7 @@
 /* end of header stylings */
 /* body section */
 .bodySection{
-  height: 80%;
+  flex: 1;
   overflow-y: auto;
   padding: 0 20px;
   display: flex;
@@ -342,6 +344,7 @@
   background: #fff;
   border-radius: 15px;
   box-shadow: inset 0 0 4px #0001;
+  padding: 10px 0;
 }
 .lower-body .icon{
   margin: auto;
@@ -350,12 +353,11 @@
   font-size: 2rem;
   color: #19abf0;
 }
-.lower-body .right-side icon{
+.lower-body .right-side .icon{
   color: #fa3c9a;
 }
 .line {
   text-align: center;
-  margin-bottom: 10px;
   color: black;
 }
 
@@ -380,7 +382,6 @@
 /* footer stylings */
 
 .footer {
-  position: absolute;
   bottom: 15px;
   width: calc(100% - 20px);
   left: 0;
@@ -392,10 +393,12 @@
   justify-content: center;
   align-items: center;
   padding: 4px 10px;
+  background-color: #fffffe;
+  border-radius: 0 0 20px 20px;
+
 }
 .footer .icons{
   display: flex;
-  background-color: #fffffe;
   padding: 15px 0 5px 0;
   flex: 1;
   width: 100%;

@@ -41,13 +41,13 @@ const MiddleBody = () => {
         <div className='left'>
           <span className='dot'></span>
           <span>
-            Lower ${maxDataValue}
+            highest ${maxDataValue}
           </span>
         </div>
         <div className='right'>
           <span className='dot'></span>
           <span>
-            highest ${minDataValue}
+            Lowest ${minDataValue}
           </span>
         </div>
       </div>

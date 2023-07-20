@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {IoChevronBackOutline} from 'react-icons/io5'
 import {BiDotsVerticalRounded} from 'react-icons/bi'
 import {GiNetworkBars} from 'react-icons/gi'
@@ -9,6 +9,8 @@ import {GoShare} from 'react-icons/go'
 import {IoMdRemoveCircleOutline} from 'react-icons/io'
 
 const Header = () => {
+  const [aside, setAside] = useState(false)
+
   return (
     <div className="header">
       <div className="top">
@@ -34,35 +36,35 @@ const Header = () => {
           <IoChevronBackOutline />
         </span>
         <span className='walletName'>Bitcoin Wallet</span>
-        <span className='toggle'>
+        <span onClick={()=> setAside(true)} className='toggle'>
           <BiDotsVerticalRounded />
         </span>
 
-        <div className='blur'>
+        <div className={`blur ${aside && 'active'}`}>
           <div className='content'>
-            <div className='toggle'>
+            <div onClick={()=> setAside(false)} className='toggle'>
               <BsThreeDots />
             </div>
             <div className='options'>
-              <div>
+              <div  onClick={()=> setAside(false)}>
                 <span>Edit</span>
                 <span>
                   <CgEditFlipH />
                 </span>
               </div>
-              <div>
+              <div  onClick={()=> setAside(false)}>
                 <span>Courier Info</span>
                 <span>
                   <BsDashSquare />
                 </span>
               </div>
-              <div>
+              <div  onClick={()=> setAside(false)}>
                 <span>Share</span>
                 <span>
                   <GoShare />
                 </span>
               </div>
-              <div>
+              <div  onClick={()=> setAside(false)}>
                 <span>Remove</span>
                 <span>
                   <IoMdRemoveCircleOutline />

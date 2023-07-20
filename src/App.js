@@ -1,18 +1,12 @@
 import React from 'react';
 import './App.css';
-
 import Body from './Components/Body/Body';
-
 import Header from './Components/Header'; 
-import Body from './Components/Body/UpperBody'
 import Footer from './Components/Footer';
 
 function App() {
   return (
-    <section className='phone'>
-      
-      <Body/>
-      
+    <section className='phone'>      
       <Header />
       <Body/>
       <Footer/>

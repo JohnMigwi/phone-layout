@@ -34,6 +34,15 @@ const MiddleBody = () => {
           Year
         </div>
       </div>
+      
+      <div>
+        <div className='left'>
+        <CustomTooltip maxDataValue={maxDataValue} />
+        </div>
+        <div className='right'>
+        <CustomTooltip  minDataValue={minDataValue} />
+        </div>
+      </div>
       <div className="middle-body">
       <div className="custom-tooltip-container">
           <CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />
@@ -48,8 +57,6 @@ const MiddleBody = () => {
               bottom: 0,
             }}
           >
-            
-            <Tooltip content={<CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />} />
             <Area type="monotone" dataKey="uv" stroke="#f7bc0a" fill="#fad157" dot={<CustomDot fill="#fad157" />} />
           </AreaChart>
         </ResponsiveContainer>

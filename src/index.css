@@ -120,6 +120,7 @@
 
 
 /* Middle body*/
+
 .middle-body {
   display: flex;
   flex-direction: column;
@@ -131,9 +132,11 @@
   border-radius: 5px;
   margin-top: 5px; 
   margin-bottom: 20px ; 
-  height: 100%;
+  height:100% ;
   
 }
+
+
 /* Lower Body css */
 .lower-body {
   display: flex;
@@ -141,6 +144,8 @@
   padding: 10px;
 
 }
+
+
 
 .left-side,
 .right-side {

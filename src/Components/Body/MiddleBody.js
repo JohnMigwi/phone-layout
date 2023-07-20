@@ -5,7 +5,7 @@ import CustomDot from '../../Resource/CustomDot';
 import CustomTooltip from '../../Resource/customtool';
 
 
-const MiddleBody = () => {
+const MiddleBody = ({analytics}) => {
   const [period, setPeriod] = useState('week');
 
   const handlePeriodChange = (newPeriod) => {
@@ -20,9 +20,18 @@ const MiddleBody = () => {
 
   console.log(maxDataValue, minDataValue)
 
+  // manual stylings
+  const style = {
+    height: '40%',
+  }
+
+  const style2 = {
+    height: '90%'
+  }
+
   return (
-    <section className='middle-section'>
-      <div className="period-buttons">
+    <section className={`middle-section `} style={analytics? {} : style}>
+      <div className={`period-buttons ${analytics && 'active'}`}>
         <div className="period-text" onClick={() => handlePeriodChange('day')}>
           Day
         </div>
@@ -51,7 +60,7 @@ const MiddleBody = () => {
           </span>
         </div>
       </div>
-      <div className="middle-body">
+      <div className="middle-body" style={analytics? {}: style2}>
       <div className="custom-tooltip-container">
           <CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />
         </div>

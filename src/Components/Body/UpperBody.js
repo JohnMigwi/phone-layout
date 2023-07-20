@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBitcoin } from 'react-icons/fa';
 import {SlArrowDown, SlArrowUp} from 'react-icons/sl'
-const UpperBody = () => {
+const UpperBody = ({handleAnalytics, analytics}) => {
   return (
     <div className="upper-body">
       <div className="bitcoin">
@@ -15,10 +15,10 @@ const UpperBody = () => {
         <span className="percentage-decrease">-2.32%</span>
       </div>
       <div className="arrows">
-          <span className='active'>
+          <span onClick={()=> handleAnalytics()} className={analytics? "": "active"}>
               <SlArrowDown />
           </span>
-          <span>
+          <span onClick={()=> handleAnalytics()} className={analytics && 'active'}>
               <SlArrowUp />
           </span>
       </div>

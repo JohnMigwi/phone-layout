@@ -10,30 +10,79 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #e5eaf0;
 }
 .phone{
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   margin: auto;
   height: 90vh;
-  border-radius: 50px;
-  border: 2px solid black;
+  border-radius: 20px;
   padding: 10px;
   overflow: hidden;
 
 }
 
-/* //Header stylings */
-
+/* Header stylings */
 
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #faf2f2;
-  color: #020202;
+  background-color: #fffffe;
+  border-radius: 20px 20px 0 0;
+
 }
+.header .top{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+}
+.header .time{
+  padding: 0 4px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .top .notch{
+  flex: 1;
+  height: 100%;
+  background-color: #e5eaf0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.header .icons{
+  width: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.header .bottom{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+.header .backArrow,
+.header .toggle{
+  cursor: pointer;
+  color: #c2c8cd;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.header .bottom .walletName{
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #566170;
+
+}
+
+/* end of header stylings */
 
 .top-layer {
   display: flex;

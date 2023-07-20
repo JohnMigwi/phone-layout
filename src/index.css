@@ -33,6 +33,7 @@
   padding: 10px;
   background-color: #faf2f2;
   color: #020202;
+  margin: 10px 0px 20px 0px;
 }
 
 .top-layer {
@@ -188,6 +189,7 @@
   margin-top: 20px;
   background-color: #faf2f2;
   color: #020202;
+  height: 70px;
 }
 
 .footer-icon {

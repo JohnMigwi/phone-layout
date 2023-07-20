@@ -41,28 +41,33 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tiny-area-chart-uw0k8';
 
+
+export default class Example extends PureComponent {
   render() {
     return (
-    <div className="middle-body">
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart
-          width={200}
-          height={60}
-          data={data}
-          margin={{
-            top: 5,
-            right: 0,
-            left: 0,
-            bottom: 5,
-          }}
-        >
-          <Area type="monotone" dataKey="uv" stroke="#f7bc0a" fill="#fad157" />
-        </AreaChart>
-      </ResponsiveContainer>
+    <>
+    <div className='period'>
+      
     </div>
+    <div className="middle-body">
+                <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart
+                        width={200}
+                        height={60}
+                        data={data}
+                        margin={{
+                            top: 5,
+                            right: 0,
+                            left: 0,
+                            bottom: 5,
+                        }}
+                    >
+                        <Area type="monotone" dataKey="uv" stroke="#f7bc0a" fill="#fad157" />
+                    </AreaChart>
+                </ResponsiveContainer>
+    </div>
+    </>
     );
   }
 }

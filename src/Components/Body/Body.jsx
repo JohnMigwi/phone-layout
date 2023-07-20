@@ -5,11 +5,11 @@ import LowerBody from './LowerBody';
 
 const Body = () => {
   return (
-    <>
+    <section className='body-section'>
     <UpperBody/>
     <MiddleBody/>
     <LowerBody/>
-    </>
+    </section>
   )
 }
 

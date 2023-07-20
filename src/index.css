@@ -25,7 +25,11 @@
   display: flex;
   flex-direction: column;
 }
-
+@media (max-width: 450px) {
+ .phone{
+  height: 100vh;
+ }
+}
 /* Header stylings */
 
 .header {
@@ -162,6 +166,7 @@
 /* body section */
 .bodySection{
   flex: 1;
+  flex-grow: 1;
   overflow-y: auto;
   padding: 0 20px;
   display: flex;

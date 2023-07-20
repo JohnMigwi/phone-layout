@@ -4,7 +4,7 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 const data = [
   {
     name: 'Page A',
-    uv: 2,
+    uv: 1.8,
     pv: 1,
     amt: 1,
   },
@@ -26,10 +26,16 @@ const data = [
     pv: 1,
     amt: 1,
   },
+  {
+    name: 'Page E',
+    uv: 2.2,
+    pv: 1,
+    amt: 1,
+  },
 
   {
     name: 'Page G',
-    uv: 2.4,
+    uv: 2.3,
     pv: 1,
     amt: 1,
   },
@@ -53,7 +59,7 @@ export default class Example extends PureComponent {
             bottom: 5,
           }}
         >
-          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+          <Area type="monotone" dataKey="uv" stroke="#f7bc0a" fill="#fad157" />
         </AreaChart>
       </ResponsiveContainer>
     </div>

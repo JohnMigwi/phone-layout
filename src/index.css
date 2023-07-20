@@ -10,32 +10,203 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #e5eaf0;
 }
 .phone{
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   margin: auto;
   height: 90vh;
-  border-radius: 50px;
-  border: 2px solid black;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 15px 10px;
   overflow: hidden;
+  box-shadow: 3px 6px 10px gray;
+  position: relative;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
 }
+@media (max-width: 450px) {
+ .phone{
+  height: 100vh;
+ }
+}
+/* Header stylings */
 
-/* //Header stylings */
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #faf2f2;
-  color: #020202;
-  margin: 10px 0px 20px 0px;
+  background-color: #fffffe;
+  border-radius: 20px 20px 0 0;
+}
+.header .top{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+}
+.header .time{
+  padding: 0 4px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .top .notch{
+  flex: 1;
+  height: 100%;
+  background-color: #e5eaf0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
+.header .notch .earpiece{
+  display: block;
+  width: 50px;
+  height: 10px;
+  border-radius: 3px;
+  box-shadow: inset 2px 2px 2px 2px rgb(178, 178, 178);
+}
+.header .notch .microphone{
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 2px 2px rgb(178, 178, 178);
+
+}
+
+.header .icons{
+  width: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.header .bottom{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+.header .backArrow,
+.header .toggle{
+  cursor: pointer;
+  color: #c2c8cd;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.header .bottom .walletName{
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #566170;
+
+}
+.header .blur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  transform: translateX(100%);
+  transition: all .3s linear;
+}
+.header .blur.active{
+  transform: translateX(0);
+}
+
+.header .blur .content{
+  position: absolute;
+  top: 10%;
+  right: 10px;
+}
+.header .blur .toggle{
+  color: white;
+  text-align: end;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.header .options{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 2px;
+  width: 200px;
+}
+.header .options div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all .2s ease;
+
+}
+.header .options div:hover{
+  background-color: rgba(128, 128, 128, 0.432);
+}
+.header .options div:last-child{
+  color: red;
+}
+
+
+/* end of header stylings */
+/* body section */
+.bodySection{
+  flex: 1;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow-y: auto;
+}
+
+.bodySection .middle-section{
+  overflow: hidden;
+  position: relative;
+  height: 50%;
+}
+.bodySection .analytics{
+  background-color: white;
+  display: flex;
+  height: 10%;
+}
+
+.bodySection .analytics div{
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #646060;
+}
+
+.bodySection .analytics div .dot{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+.bodySection .analytics div:last-child .dot{
+  background-color: green;
+}
+/* end of body section */
 .top-layer {
   display: flex;
   justify-content: space-between;
@@ -77,46 +248,79 @@
 
 
 .upper-body {
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ccc;
+  background-color: #fffffe;
+  padding: 20px;
   border-radius: 5px;
 }
 
-.line {
+.upper-body .bitcoin {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
+  padding: 5px 0;
 }
 
-.bitcoin-icon {
-  font-size: 24px;
-  margin-right: 10px;
+.upper-body .bitcoin-icon {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #ffb13b;
 }
 
-.name {
-  font-size: 18px;
+.upper-body .name {
+  font-size: 1.2rem;
+}
+
+.upper-body .symbol {
+  font-size: 1.2rem;
+  color: #d0d4d9;
+  flex: 1;
+  text-align: end;
   font-weight: bold;
-  margin-right: 10px;
+}
+.upper-body .amountBtc{
+  font-size: 2rem;
+  color: #adb4b9;
+  font-weight: 800;
+  padding: 5px 0;
+}
+.upper-body .amountUsd{
+  display: flex;
+  justify-content: space-between;
+}
+.upper-body .amountUsd span:first-child{
+  color: #cad3d9;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+.upper-body .percentage-decrease {
+  color: white;
+  background-color: #f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-weight: 800;
+  border-radius: 100px;
 }
 
-.symbol {
-  font-size: 16px;
-  color: #888;
+.upper-body .arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.upper-body .arrows span{
+  font-weight: 800;
+  color: #566170;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+.upper-body .arrows span.active{
+  display: inline;
 }
 
-.percentage-decrease {
-  color: #f00;
-  margin-left: 10px;
-}
-
-.arrow-down {
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 12px solid #f00;
-  width: 0;
-  height: 0;
-}
 
 
 /* Middle body*/
@@ -128,11 +332,8 @@
   align-items: center;
   background-color: #fff;
   padding: 65px 25px 0px 0px ;
-  outline: 1px solid #ccc;
   border-radius: 5px;
-  margin-top: 5px; 
-  margin-bottom: 20px ; 
-  height:100% ;
+  height:80%;
   
 }
 
@@ -141,37 +342,29 @@
 .lower-body {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-
 }
-
-
 
 .left-side,
 .right-side {
-  width: 140px;
-  height: 100px;
-  display: grid;
-  place-content: center;
-  text-align: center;
+  flex: 1;
   background: #fff;
   border-radius: 15px;
   box-shadow: inset 0 0 4px #0001;
+  padding: 10px 0;
 }
-
+.lower-body .icon{
+  margin: auto;
+  width: max-content;
+  height: max-content;
+  font-size: 2rem;
+  color: #19abf0;
+}
+.lower-body .right-side .icon{
+  color: #fa3c9a;
+}
 .line {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  text-align: center;
   color: black;
-}
-
-.dollar-icon {
-  font-size: 20px;
-  margin-right: 10px;
-  background-color: blue;
-  border-radius: 40px;
-  padding: 2px 2px 2px 2px;
 }
 
 .blue {
@@ -195,28 +388,68 @@
 /* footer stylings */
 
 .footer {
+  bottom: 15px;
+  width: calc(100% - 20px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  background-color: #faf2f2;
-  color: #020202;
-  height: 70px;
+  padding: 4px 10px;
+  background-color: #fffffe;
+  border-radius: 0 0 20px 20px;
+
+}
+.footer .icons{
+  display: flex;
+  padding: 15px 0 5px 0;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+.footer .icons > *{
+  font-size: 1.5rem;
+  color: #c2c8cd;
+}
+.footer .icons > :first-child{
+  color: black;
 }
 
-.footer-icon {
-  padding: 8px;
+.footer .notch{
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 20px;
+  border-radius: 0 0 20px 20px;
+}
+.footer .notch span{
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 7px;
+  border-radius: 100px;
+  background-color: gray;
 }
 
 
 
 /* //extras */
 .period-buttons {
+  height: 10%;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  
+  position: absolute;
+  transition: all .2s linear;
+  transform: translateY(-100%);
+}
+.period-buttons.active{
+  position: static;
+  transform: translateY(0%);
 }
 
 .period-text {

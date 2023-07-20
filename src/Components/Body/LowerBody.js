@@ -1,20 +1,20 @@
 import React from 'react';
-import { FaDollarSign } from 'react-icons/fa';
+import { BiSolidDollarCircle } from 'react-icons/bi';
 
 const LowerBody = () => {
   return (
     <div className="lower-body">
 
       <div className="left-side">
-        <div className="line">
-          <FaDollarSign className="dollar-icon blue" />
+        <div className="icon">
+          <BiSolidDollarCircle/>
         </div>
         <div className="line">Buy BTC</div>
       </div>
 
       <div className="right-side">
-        <div className="line">
-          <FaDollarSign className="dollar-icon pink" />
+        <div className="icon">
+          <BiSolidDollarCircle/>
         </div>
         <div className="line">Sell BTC</div>
       </div>

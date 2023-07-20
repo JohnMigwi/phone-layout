@@ -5,7 +5,7 @@ import CustomDot from '../../Resource/CustomDot';
 import CustomTooltip from '../../Resource/customtool';
 
 
-const MiddleBody = () => {
+const MiddleBody = ({analytics}) => {
   const [period, setPeriod] = useState('week');
 
   const handlePeriodChange = (newPeriod) => {
@@ -18,9 +18,20 @@ const MiddleBody = () => {
   const maxDataValue = Math.max(...chartData.map((dataPoint) => dataPoint.uv));
   const minDataValue = Math.min(...chartData.map((dataPoint) => dataPoint.uv));
 
+  console.log(maxDataValue, minDataValue)
+
+  // manual stylings
+  const style = {
+    height: '40%',
+  }
+
+  const style2 = {
+    height: '90%'
+  }
+
   return (
-    <>
-      <div className="period-buttons">
+    <section className={`middle-section `} style={analytics? {} : style}>
+      <div className={`period-buttons ${analytics && 'active'}`}>
         <div className="period-text" onClick={() => handlePeriodChange('day')}>
           Day
         </div>
@@ -35,15 +46,21 @@ const MiddleBody = () => {
         </div>
       </div>
       
-      <div>
+      <div className='analytics'>
         <div className='left'>
-        <CustomTooltip maxDataValue={maxDataValue} />
+          <span className='dot'></span>
+          <span>
+            highest ${maxDataValue}
+          </span>
         </div>
         <div className='right'>
-        <CustomTooltip  minDataValue={minDataValue} />
+          <span className='dot'></span>
+          <span>
+            Lowest ${minDataValue}
+          </span>
         </div>
       </div>
-      <div className="middle-body">
+      <div className="middle-body" style={analytics? {}: style2}>
       <div className="custom-tooltip-container">
           <CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />
         </div>
@@ -61,7 +78,7 @@ const MiddleBody = () => {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-    </>
+    </ section>
   );
 };
 

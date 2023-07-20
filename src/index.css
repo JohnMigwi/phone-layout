@@ -122,6 +122,7 @@
 /* Middle body css */
 .middle-body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fff;
@@ -129,8 +130,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 20px; 
-  margin-bottom: 20px; 
-  height: 200px; /* Set a specific height for the chart container */
+  margin-bottom: 20px ; 
+  
 }
 
 

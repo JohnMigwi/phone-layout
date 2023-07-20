@@ -3,7 +3,11 @@ import {IoChevronBackOutline} from 'react-icons/io5'
 import {BiDotsVerticalRounded} from 'react-icons/bi'
 import {GiNetworkBars} from 'react-icons/gi'
 import {IoIosWifi} from 'react-icons/io'
-import {BsBatteryFull} from 'react-icons/bs'
+import {BsBatteryFull, BsDashSquare, BsThreeDots} from 'react-icons/bs'
+import {CgEditFlipH} from 'react-icons/cg'
+import {GoShare} from 'react-icons/go'
+import {IoMdRemoveCircleOutline} from 'react-icons/io'
+
 const Header = () => {
   return (
     <div className="header">
@@ -33,6 +37,42 @@ const Header = () => {
         <span className='toggle'>
           <BiDotsVerticalRounded />
         </span>
+
+        <div className='blur'>
+          <div className='content'>
+            <div className='toggle'>
+              <BsThreeDots />
+            </div>
+            <div className='options'>
+              <div>
+                <span>Edit</span>
+                <span>
+                  <CgEditFlipH />
+                </span>
+              </div>
+              <div>
+                <span>Courier Info</span>
+                <span>
+                  <BsDashSquare />
+                </span>
+              </div>
+              <div>
+                <span>Share</span>
+                <span>
+                  <GoShare />
+                </span>
+              </div>
+              <div>
+                <span>Remove</span>
+                <span>
+                  <IoMdRemoveCircleOutline />
+                </span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
       </div>
 
     </div>

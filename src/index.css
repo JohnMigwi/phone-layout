@@ -71,8 +71,9 @@
 }
 
 /* Body */
+
 /* UpperBody */
-/* UpperBody.css */
+
 
 .upper-body {
   background-color: #fff;
@@ -115,6 +116,68 @@
   width: 0;
   height: 0;
 }
+
+
+/* Middle body css */
+.middle-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  height: 200px; /* Set a specific height for the chart container */
+}
+
+
+/* Lower Body css */
+
+.lower-body {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  text-align: center;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dollar-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.blue {
+  color: blue;
+}
+.left-side {
+  margin-right: 10px; /* Add margin to separate the left side from the right side */
+}
+.pink {
+  color: pink;
+}
+
+.symbol {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
 
 /* footer stylings */
 

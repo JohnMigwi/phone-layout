@@ -441,9 +441,10 @@
 /* //extras */
 .period-buttons {
   height: 10%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  position: absolute;
+  align-items: center;
+  justify-content: space-between;
   transition: all .2s linear;
   transform: translateY(-100%);
 }
@@ -454,13 +455,13 @@
 
 .period-text {
   cursor: pointer;
-  padding: 10px 10px;
-  margin: 5px 10px;
+  padding: 5px 10px;
   border: 1px solid transparent;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .period-text:hover {

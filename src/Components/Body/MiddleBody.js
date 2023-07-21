@@ -72,7 +72,9 @@ const MiddleBody = ({analytics}) => {
               bottom: 0,
             }}
           >
+            
             <Area type="monotone" dataKey="uv" stroke="#f7bc0a" fill="#fad157" dot={<CustomDot fill="#fad157" />} />
+            
           </AreaChart>
         </ResponsiveContainer>
       </div>

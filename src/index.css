@@ -454,8 +454,8 @@
 
 .period-text {
   cursor: pointer;
-  padding: 5px 10px;
-  margin: 0 25px 0 25px;
+  padding: 10px 12px;
+  margin: 5px 10px;
   border: 1px solid transparent;
   justify-content: center;
   align-items: center;
@@ -468,20 +468,6 @@
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  .period-buttons {
-    height: auto; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    position: absolute;
-    transition: all .2s linear;
-    transform: translateY(-100%);
-  }
-
-  .period-text {
-    margin: 5px 10px; 
-  }
-}
 
 
 

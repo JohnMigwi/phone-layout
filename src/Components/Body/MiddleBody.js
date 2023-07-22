@@ -41,7 +41,7 @@ const MiddleBody = ({analytics}) => {
         <div className='left'>
           <span className='dot'></span>
           <span>
-            highest ${maxDataValue}
+            Highest ${maxDataValue}
           </span>
         </div>
         <div className='right'>

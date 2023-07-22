@@ -197,6 +197,10 @@
   background-color: white;
   display: flex;
   padding: 5px 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  color: #bdc1c9;
+  font-weight: 500;
 }
 
 .bodySection .analytics div{
@@ -206,7 +210,6 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  color: #646060;
 }
 
 .bodySection .analytics div .dot{

@@ -179,7 +179,6 @@
 .bodySection .middle-section{
   flex-grow: 1;
   flex-shrink: 0;
-  overflow: hidden;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -479,25 +478,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 15px 0;
   flex-shrink: 0;
+  margin: 2px 0;
+  transform: translateY(-6px);
 }
 
 
 .period-text {
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 5px;
   border: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all .2s linear;
+  width: 90px;
+  color: #afb4ba;
 }
 
 
-.period-text:hover {
-  background-color: #646060;
+.period-text:hover,
+.period-text:focus {
+  background-color: #b1bbc6;
   color: #fff;
 }
 

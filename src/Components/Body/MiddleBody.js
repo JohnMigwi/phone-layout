@@ -23,16 +23,16 @@ const MiddleBody = ({analytics}) => {
   return (
     <section className={`middle-section `} >
       <div className={`period-buttons `}>
-        <div className="period-text" onClick={() => handlePeriodChange('day')}>
+        <div tabIndex={0} className="period-text" onClick={() => handlePeriodChange('day')}>
           Day
         </div>
-        <div className="period-text" onClick={() => handlePeriodChange('week')}>
+        <div tabIndex={0} className="period-text" onClick={() => handlePeriodChange('week')}>
           Week
         </div>
-        <div className="period-text" onClick={() => handlePeriodChange('month')}>
+        <div tabIndex={0} className="period-text" onClick={() => handlePeriodChange('month')}>
           Month
         </div>
-        <div className="period-text" onClick={() => handlePeriodChange('year')}>
+        <div tabIndex={0} className="period-text" onClick={() => handlePeriodChange('year')}>
           Year
         </div>
       </div>

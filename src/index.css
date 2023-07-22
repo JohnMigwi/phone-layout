@@ -363,6 +363,12 @@
   border-radius: 5px;
   
 }
+@media (max-width: 450px) {
+  .middle-body{
+    height: 140px;
+  }
+  
+}
 
 
 /* Lower Body css */

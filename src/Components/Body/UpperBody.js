@@ -24,9 +24,12 @@ const UpperBody = ({handleAnalytics, analytics}) => {
               <SlArrowUp />
           </span>
       </div>
-      <div className={`${analytics && 'active'} buySell`} >
-        <LowerBody/>
+      <div className='anime'>
+        <div className={`${analytics && 'active'} buySell`} >
+          <LowerBody/>
+        </div>
       </div>
+      
     </div>
   );
 };

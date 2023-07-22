@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import UpperBody from './UpperBody';
-import MiddleBody from './MiddleBody'
+import MiddleBody from './MiddleBody';
 import LowerBody from './LowerBody';
 
 const Body = () => {
@@ -17,7 +17,7 @@ const Body = () => {
   return (
     <section className='bodySection'>
         <UpperBody handleAnalytics={handleAnalytics} analytics={analytics}/>
-        <MiddleBody analytics={analytics}/>
+        <MiddleBody />
         <LowerBody/>
     </section>
   )

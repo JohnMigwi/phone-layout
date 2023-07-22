@@ -18,18 +18,11 @@ const MiddleBody = ({analytics}) => {
   const maxDataValue = Math.max(...chartData.map((dataPoint) => dataPoint.uv));
   const minDataValue = Math.min(...chartData.map((dataPoint) => dataPoint.uv));
 
-  // manual stylings
-  const style = {
-    height: '40%',
-  }
-
-  const style2 = {
-    height: '90%'
-  }
+ 
 
   return (
-    <section className={`middle-section `} style={analytics? {} : style}>
-      <div className={`period-buttons ${analytics && 'active'}`}>
+    <section className={`middle-section `} >
+      <div className={`period-buttons `}>
         <div className="period-text" onClick={() => handlePeriodChange('day')}>
           Day
         </div>
@@ -43,7 +36,7 @@ const MiddleBody = ({analytics}) => {
           Year
         </div>
       </div>
-      
+     <div className='graph'> 
       <div className='analytics'>
         <div className='left'>
           <span className='dot'></span>
@@ -58,7 +51,7 @@ const MiddleBody = ({analytics}) => {
           </span>
         </div>
       </div>
-      <div className="middle-body" style={analytics? {}: style2}>
+      <div className="middle-body" >
       <div className="custom-tooltip-container">
           <CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />
         </div>
@@ -78,6 +71,7 @@ const MiddleBody = ({analytics}) => {
           </AreaChart>
         </ResponsiveContainer>
       </div>
+    </div> 
     </ section>
   );
 };

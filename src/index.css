@@ -165,31 +165,34 @@
 /* end of header stylings */
 /* body section */
 .bodySection{
-  flex: 1;
   flex-grow: 1;
-  overflow-y: auto;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   gap: 10px;
+  scrollbar-width: none;
 }
-
+.bodySection::-webkit-scrollbar{
+  width: 0;
+}
 .bodySection .middle-section{
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 2px solid green;
 }
+
 .graph {
   flex-grow: 1;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  justify-content: space-between;
+  background-color: white;
 }
 .bodySection .analytics{
   background-color: white;
@@ -266,7 +269,6 @@
   background-color: #fffffe;
   padding: 20px;
   border-radius: 5px;
-  border: 2px solid #f00;
   
 }
 
@@ -351,16 +353,14 @@
 /* Middle body*/
 
 .middle-body {
-  flex-grow: 1;
-  flex-shrink: 0;
+  height: 225px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  padding: 10px 25px 0px 0px ;
+  padding: 0 25px 0px 0px ;
   border-radius: 5px;
-  border: 2px solid red;
   
 }
 
@@ -475,7 +475,6 @@
   justify-content: space-between;
   padding: 10px 0;
   flex-shrink: 0;
-  border: 2px solid yellow;
 }
 
 

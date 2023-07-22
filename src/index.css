@@ -171,12 +171,12 @@
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   overflow-y: auto;
   gap: 10px;
 }
 
 .bodySection .middle-section{
+  flex: 1;
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
@@ -185,10 +185,11 @@
   border: 2px solid green;
 }
 .graph {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  max-height: 150px;
+  border: 2px solid black;
 }
 .bodySection .analytics{
   background-color: white;
@@ -350,7 +351,8 @@
 /* Middle body*/
 
 .middle-body {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

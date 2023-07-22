@@ -52,8 +52,8 @@ const MiddleBody = ({analytics}) => {
         </div>
       </div>
       <div className="middle-body" >
-      <div className="custom-tooltip-container">
-          <CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />
+        <div className="custom-tooltip-container">
+            <CustomTooltip maxDataValue={maxDataValue} minDataValue={minDataValue} />
         </div>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
@@ -70,6 +70,10 @@ const MiddleBody = ({analytics}) => {
             
           </AreaChart>
         </ResponsiveContainer>
+        <div className='btcToUsd'> 
+          <span></span>
+          <span>1BTC = $5.483</span>
+        </div>
       </div>
     </div> 
     </ section>

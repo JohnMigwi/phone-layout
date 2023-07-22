@@ -360,7 +360,7 @@
   background-color: #fff;
   padding: 0 25px 0px 0px ;
   border-radius: 5px;
-  
+  position: relative;
 }
 @media (max-width: 450px) {
   .middle-body{
@@ -369,6 +369,22 @@
   
 }
 
+.middle-body .btcToUsd{
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  bottom: 20px;
+  left: 40px;
+  color: #5d5e5e;
+  font-weight: bold;
+}
+.middle-body .btcToUsd span:first-child{
+  width: 10px;
+  height: 10px;
+  background-color: #ffab26;
+  border-radius: 50%;
+}
 
 /* Lower Body css */
 .lower-body {

@@ -168,22 +168,32 @@
   flex: 1;
   flex-grow: 1;
   overflow-y: auto;
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   overflow-y: auto;
+  gap: 10px;
 }
 
 .bodySection .middle-section{
   overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  height: 50%;
+  border: 2px solid green;
+}
+.graph {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 150px;
 }
 .bodySection .analytics{
   background-color: white;
   display: flex;
-  height: 10%;
+  padding: 5px 0;
 }
 
 .bodySection .analytics div{
@@ -222,6 +232,7 @@
   margin-left: 10px;
 }
 
+
 .bottom-layer {
   display: flex;
   justify-content: space-between;
@@ -234,6 +245,7 @@
   display: flex;
   align-items: center;
   padding: 5px;
+  
 }
 
 .center {
@@ -241,6 +253,8 @@
   text-align: center;
   font-weight: bold;
 }
+
+
 
 /* Body */
 
@@ -251,6 +265,8 @@
   background-color: #fffffe;
   padding: 20px;
   border-radius: 5px;
+  border: 2px solid #f00;
+  
 }
 
 .upper-body .bitcoin {
@@ -304,6 +320,14 @@
   border-radius: 100px;
 }
 
+.upper-body .buySell {
+  display: none;
+}
+
+.upper-body .buySell.active {
+  display: block;
+}
+
 .upper-body .arrows {
   display: flex;
   flex-direction: column;
@@ -326,14 +350,15 @@
 /* Middle body*/
 
 .middle-body {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  padding: 65px 25px 0px 0px ;
+  padding: 10px 25px 0px 0px ;
   border-radius: 5px;
-  height:80%;
+  border: 2px solid red;
   
 }
 
@@ -342,6 +367,7 @@
 .lower-body {
   display: flex;
   justify-content: space-between;
+
 }
 
 .left-side,
@@ -445,24 +471,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all .2s linear;
-  transform: translateY(-100%);
+  padding: 10px 0;
+  flex-shrink: 0;
+  border: 2px solid yellow;
 }
-.period-buttons.active{
-  position: static;
-  transform: translateY(0%);
-}
+
 
 .period-text {
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid transparent;
-  
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all .2s linear;
 }
+
 
 .period-text:hover {
   background-color: #646060;

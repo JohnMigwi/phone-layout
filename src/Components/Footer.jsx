@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiFolderRemove } from 'react-icons/hi';
+import { PiWalletFill} from 'react-icons/pi';
 import {IoCompass} from 'react-icons/io5'
 import {BiSolidBell} from 'react-icons/bi'
 import {RiSettings5Fill} from 'react-icons/ri'
@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="footer">
       <div className='icons'>
         <span>
-          <HiFolderRemove/>
+          <PiWalletFill/>
         </span>
         <span>
           <IoCompass />
